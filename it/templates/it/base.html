@@ -1,0 +1,35 @@
+<!--
+<!DOCTYPE html>
+{% load staticfiles %}
+        <link rel="stylesheet" href="{% static 'css/it.css' %}">
+            <h1><a href="/">IT Manual</a></h1>
+-->
+<html>
+    <head>
+        <title>IT Manual</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+
+        <style>
+            body                   {padding-left:18px;background-color:#F3FFF3}
+            p                      {font-size:large;font-weight:bold;color:#0000C0;background-color:#F3FFF3;}
+            h1                     {font-size:large;font-weight:bold;color:#000000;background-color:#F3FFF3;}
+            h1 table tr td         {font-size:large;font-weight:bold;color:#000000;background-color:#F3FFF3;}
+        </style>
+    </head>
+    <body>
+        <div>
+
+            <a href="{% url 'it.urls.post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+
+        </div>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>
+<!--
+            <a href="{qqq% url 'it.views.post_new' %qqq}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+-->
+
+

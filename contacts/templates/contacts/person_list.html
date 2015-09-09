@@ -1,0 +1,21 @@
+{% extends "contacts/base.html" %}
+
+{% block content %}
+
+      {% for person in persons %}
+
+
+      <a class="date" href="{% url "person_detail" pk=person.pk %}">
+
+      {{person.first_name}}
+      {{person.second_name}}
+      {{person.name_in_esg}}
+      {{person.email}}
+      {{person.phone_a}}
+      {{person.phone_b}}
+      <br>
+      </a>
+
+      {% endfor %}
+
+{% endblock content %}
