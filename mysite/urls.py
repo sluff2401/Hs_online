@@ -7,13 +7,10 @@ def home_page(request):
 
 urlpatterns = [
     url(r'^$',                 'mysite.urls.home_page'),
-    url(r'admin/',             include(admin.site.urls)),
     url(r'^admin/',            include(admin.site.urls)),
     url(r'^accounts/login/$',  'django.contrib.auth.views.login'),
     url(r'^accounts/logout/$', 'django.contrib.auth.views.logout', {'next_page': '/'}),
-    #url(r'^accounts/profile/$',  'django.contrib.auth.views.profile'),
-    url(r'it/',                include('it.urls')),
-    url(r'djgtut/',            include('djgtut.urls')),
-    url(r'barbecue/',          include('barbecue.urls')),
-    url(r'contacts/',          include('contacts.urls')),
+    url(r'^djgtut/',            include('djgtut.urls')),
+    url(r'^contacts/',          include('contacts.urls')),
+    url(r'^12345diary12345/',   include('diary.urls')),
 ]

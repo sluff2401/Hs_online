@@ -29,8 +29,8 @@ INSTALLED_APPS = (
     'mysite',
     'it',
     'djgtut',
-    'barbecue',
     'contacts',
+    'diary',
 )
 
 MIDDLEWARE_CLASSES = (
