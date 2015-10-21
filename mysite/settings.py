@@ -27,10 +27,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mysite',
-    'it',
-    'djgtut',
-    'contacts',
-    'diary',
+    'events_app_b',
 )
 
 MIDDLEWARE_CLASSES = (

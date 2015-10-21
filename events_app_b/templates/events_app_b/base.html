@@ -3,8 +3,7 @@
 <head>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-  <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="{% static "css/contacts.css" %}">
+
   <style>
 
      h1,  h1 a,  h1 a:visited,  h1 a:active {
@@ -19,6 +18,14 @@
       text-decoration: none;
     }
 
+    h2, h2:visited {
+      color: #000000;
+      background-color:#F3FFF3;
+      font-size: x-large;
+      font-weight:bold;
+      padding-left:15px;
+    }
+
     h2 a, h2 a:visited {
       color: #000000;
       background-color:#F3FFF3;
@@ -27,40 +34,22 @@
       text-align:center;
     }
 
-    h2.date a, h2.date a:visited {
-      color: #000000;
-      background-color:#F3FFF3;
-      font-size: x-large;
-      font-weight:bold;
-      text-align:center;
-      padding-left:15px;
-    }
-
     h2.item , h2.item :visited {
       color: #0000c0;
-      background-color:#F3FFF3;
-      font-size: x-large;
-      font-weight:bold;
-      padding-left:15px;
     }
 
-    .content {
-      margin-left: 40px;
+    h2.attendees , h2.attendees :visited {
+      color: #00c000;
     }
 
-    .zdate {
-      float: right;
+    hr {
       color: #000000;
-      background-color: #f3fff3;
+      background-color:#F3FFF3;
       font-weight:bold;
     }
 
-    .save {
-      float: right;
-    }
-
-    .post-form textarea, .post-form input {
-      width: 100%;
+    body {
+      background-color:#F3FFF3;
     }
 
     .top-menu, .top-menu:hover, .top-menu:visited {
@@ -70,19 +59,17 @@
       margin-right: 20px;
     }
 
-    .post {
-      margin-bottom: 70px;
-    }
   </style>
 </head>
 <body>
     {% if user.is_authenticated %}
-        <a href="{% url 'person_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-        <p class="top-menu">Hello {{ user.username }}<small>(<a href="{% url 'django.contrib.auth.views.logout' %}">Log out</a>)</small></p>
-     {% else %}
-        <a href="{% url 'django.contrib.auth.views.login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
+        <p class="top-menu"><small>(<a href="{% url 'django.contrib.auth.views.logout' %}">Log out</a>)</small></p>
+    {% comment %}
+    {% else %}
+        <a  class="btn btn-default" href="{% url 'django.contrib.auth.views.login' %}" class="top-menu"><span>Click here to log in</span></a>
+    {% endcomment %}
     {% endif %}
-    <h1><a href="{% url 'contacts.views.person_list' %}">Contacts</a></h1>
+    <h1><a href="{% url 'events_app_b.views.event_list' %}">Xxx club programme</a></h1>
     <hr>
       {% block content %}
       {% endblock %}

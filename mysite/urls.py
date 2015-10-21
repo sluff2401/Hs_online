@@ -10,7 +10,5 @@ urlpatterns = [
     url(r'^admin/',            include(admin.site.urls)),
     url(r'^accounts/login/$',  'django.contrib.auth.views.login'),
     url(r'^accounts/logout/$', 'django.contrib.auth.views.logout', {'next_page': '/'}),
-    url(r'^djgtut/',            include('djgtut.urls')),
-    url(r'^contacts/',          include('contacts.urls')),
-    url(r'^12345diary12345/',   include('diary.urls')),
+    url(r'^clubwebpage',        include('events_app_b.urls')),
 ]
